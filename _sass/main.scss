@@ -106,6 +106,11 @@ section {
     background-size: 200% 100%;
 }
 
+.navbar-burger {
+    padding-right: 0.5em;
+    transform: scale(2);
+}
+
 //story styling
 
 .center {
@@ -122,6 +127,12 @@ section {
 }
 figure > img {
     border-radius: 50%;
+}
+
+@media screen and (max-width: 1000px) {
+    #story {
+        margin-bottom: 20em;
+    }
 }
 
 //memories styling
@@ -251,6 +262,13 @@ figure > img {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   }
 
+  @media screen and (max-width: 1000px) {
+      .kolom {
+       width: 90% !important; 
+      }
+    
+  }
+
 
 
 //venue styling
@@ -314,6 +332,15 @@ input[type=submit]:hover {
 input[type=submit]:active {
     background-color: $blue;
     transform: scale(1.1);
+}
+
+@media screen and (max-width: 1000px) {
+    #form{
+        background: none ;
+        margin-left: 0.5em;
+        margin-right: 0.5em;
+    }
+    
 }
 
 
