@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/main.css">
+   
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+    <title>Anouk & Seppe</title>
+</head>
+<body>
+
+    
+
+  <!--navigation-->
+
+  <nav class="navbar is-transparent is-fixed-top">
+
+    
+      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+          <span aria-hidden="true"></span>
+        </a>
+      
+
+    
+
+      <div id="navMenu" class="navbar-menu">
+      <div class="navbar-start">
+          
+              <a href="#home" class="navbar-item is-active">Home</a>
+              <a href="#story" class="navbar-item">The story</a>
+              <a href="#venue" class="navbar-item">Venue</a>
+              <a href="#wishlist" class="navbar-item">Wishlist</a>
+    
+            </div>
+      </div>
+      
+      </nav>
+
+   
+
+      <div class="hero is-info" id="home">
+
+        <div class="container">
+
+            <h1 class="title is-1">Anouk & Seppe</h1>
+            <h4 class="title is-4">22 juni 2019</h4>
+
+        </div>
+
+      </div>
+
+      
+
+      <!--countdown-->
+      <section>
+
+          <h3 class="title is-3">Nog <div id="countdown"></div> tot de big day!</h3>
+
+
+      </section>
+
+      
+          
+               
+
+         
+
+      <!-- story-->
+      <section id="story" >
+
+        <div class="title is-2">The story</div>
+
+        <div class="columns has-text-centered">
+          <div class="container">
+
+              <div class="column">
+                  <h3 class="title is-3" >Anouk</h3>
+                  <figure class="profile-pic center">
+                    <img src="img/anouk.jpg" alt="anouk profile pic">
+                  </figure>
+                  <p> 
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non blanditiis neque molestias ipsa iste ut voluptatibus expedita deleniti facere, perferendis unde dicta aliquid cumque iure, cupiditate tempore fugit pariatur sit?
+                  </p>
+                </div>
+          </div>
+             <div class="container">
+                <div class="column">
+                    <h3 class="title is-3" >Seppe</h3>
+                    <figure class="profile-pic center">
+                        <img src="img/seppe.jpg" alt="seppe profile pic">
+                      </figure>
+                      <p> 
+                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non blanditiis neque molestias ipsa iste ut voluptatibus expedita deleniti facere, perferendis unde dicta aliquid cumque iure, cupiditate tempore fugit pariatur sit?
+                        </p>
+             </div>
+
+          </div>
+
+        </div>
+
+      </section>
+
+        <!--memories-->
+
+        <div class="title is-2">Memories</div>
+
+        <div class="row">
+            <div class="kolom">
+              <img src="img/drinking.jpg" onclick="openModal();currentSlide(1)" class="hover-shadow">
+            </div>
+            <div class="kolom">
+              <img src="img/scooter.jpg" onclick="openModal();currentSlide(2)" class="hover-shadow">
+            </div>
+            <div class="kolom">
+              <img src="img/frontpicture.jpg" onclick="openModal();currentSlide(3)" class="hover-shadow">
+            </div>
+            <div class="kolom">
+              <img src="img/cover.jpg" onclick="openModal();currentSlide(4)" class="hover-shadow">
+            </div>
+          </div>
+          
+          <!-- The Modal/Lightbox -->
+          <div id="myModal" class="modal">
+            <span class="close cursor" onclick="closeModal()">&times;</span>
+            <div class="modal-content">
+          
+              <div class="mySlides">
+                <div class="numbertext">1 / 4</div>
+                <img src="img/drinking.jpg" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">2 / 4</div>
+                <img src="img/scooter.jpg" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">3 / 4</div>
+                <img src="img/frontpicture.jpg" style="width:100%">
+              </div>
+          
+              <div class="mySlides">
+                <div class="numbertext">4 / 4</div>
+                <img src="img/cover.jpg" style="width:100%">
+              </div>
+          
+              <!-- Next/previous controls -->
+              <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+              <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          
+              <!-- Caption text -->
+              <div class="caption-container">
+                <p id="caption"></p>
+              </div>
+          
+              <!-- Thumbnail image controls -->
+              <div class="kolom">
+                <img class="demo" src="img/drinking.jpg" onclick="currentSlide(1)" alt="Drinking">
+              </div>
+          
+              <div class="kolom">
+                <img class="demo" src="img/scooter.jpg" onclick="currentSlide(2)" alt="Scooter">
+              </div>
+          
+              <div class="kolom">
+                <img class="demo" src="img/frontpicture.jpg" onclick="currentSlide(3)" alt="Seppe en Anouk">
+              </div>
+          
+              <div class="kolom">
+                <img class="demo" src="img/cover.jpg" onclick="currentSlide(4)" alt="Cover">
+              </div>
+            </div>
+          </div>
+          </section>
+        
+          
+
+      <!--Venue-->
+
+      <section id="venue">
+
+          <div class="title is-2">The Venue</div>
+
+          <div id="map"></div>
+  
+        </section>
+
+      <!-- wishlist-->
+      <section id="wishlist">
+
+        <div class="title is-2">
+          Wishlist
+        </div>
+
+      </section>
+
+
+      <!-- formulier -->
+      <section id="form">
+
+      <div class="title is-2">RSVP</div>
+      <form class="container">
+     
+          
+        <div class="field">
+            <label for="name">Jouw naam: <span class="asterix">*</span></label>
+            <input class="input is-large" name="naam" type="text" required>
+        </div>
+
+        <div class="field">
+            <label for="name">Naam partner:</label>
+            <input class="input is-large" name="naam partner" type="text" >
+        </div>
+
+        <div class="field">
+            <label for="name">Jouw emailadres: <span class="asterix">*</span></label>
+            <input class="input is-large" name="email" type="email" required>
+        </div>
+
+        <div class="field">
+            <label for="name">Deze schijfkes wil ik geire horen (3):</label>
+            <textarea class="textarea" name="schijfkes" type="textarea"></textarea>
+        </div>
+
+        <input class="button is-large submit" type="submit" value="Ik kom!">
+        
+      </form>
+
+    </section>
+
+      <!--footer-->
+
+      <footer class="footer">
+          <div class="content has-text-centered">
+            <p>
+              Made by <a href="https://maxstouten.netlify.com">M</a> with 💓
+            </p>
+          </div>
+        </footer>
+
+    <script type="text/javascript" src="_javascript/main.js"></script>
+    
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmirX6Ssn27SjjaS5fjDxtj9GVNERSZic&callback=initMap"
+    async defer></script>
+</body>
+</html>

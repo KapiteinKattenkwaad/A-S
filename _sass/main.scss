@@ -1,0 +1,338 @@
+@charset "utf-8";
+
+// Customization
+
+// You can easily customize Bulma with your own variables.
+// Just uncomment the following block to see the result.
+
+
+// 1. Import the initial variables
+@import "../node_modules/bulma/sass/utilities/initial-variables";
+
+// 2. Set your own initial variables
+// Update the blue shade, used for links
+$blue: #06bcef;
+// Add pink and its invert
+$pink: #ff8080;
+$pink-invert: #fff;
+$navbar-item-active-color: #06bcef;
+
+// Update the sans-serif font family
+$family-sans-serif: "Helvetica", "Arial", sans-serif;
+
+// 3. Set the derived variables
+// Use the new pink as the primary color
+$primary: $pink;
+$primary-invert: $pink-invert;
+
+// 4. Import the rest of Bulma
+html {
+    scroll-behavior: smooth;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+p, label {
+    font-family: 'Charm', cursive;
+    font-size: 1.5em;
+    
+}
+
+section {
+    margin-top: 7em;
+    margin-bottom: 7em;
+    padding-top: 2em;
+    height: 100vh;
+    width: 100vw;
+  }
+
+/* hero styling */
+
+.hero {
+    background-image: url("../img/cover.jpg");
+    height: 100vh;
+    position: sticky;
+}
+
+.is-1 {
+    padding-top: 4em;
+}
+
+#countdown {
+    animation-iteration-count: infinite;
+    animation-name: shine;
+    animation-duration: 1.4s;
+
+    @keyframes shine {
+        20% {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
+    }
+}
+
+
+
+//navbar styling
+.navbar {
+    font-family: 'ZCOOL XiaoWei', serif;
+    font-size: 2em;
+    flex-grow: 1;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 30%;  
+}
+
+.navbar > .container {
+    display: none !important;
+}
+
+#countdown {
+    color: $pink;
+}
+
+.is-2 {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: inline-block;
+    font-size: 2em;
+    position: relative;
+    background-image: linear-gradient(transparent 60%, $pink 40%);
+    background-repeat: repeat-x;
+    background-size: 200% 100%;
+}
+
+//story styling
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+  }
+
+.profile-pic {
+    width: 100px;
+    height: 100px;
+    
+}
+figure > img {
+    border-radius: 50%;
+}
+
+//memories styling
+.row > .kolom {
+    padding: 0 8px;
+  }
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Create four equal columns that floats next to eachother */
+  .kolom {
+    float: left;
+    width: 25%;
+  }
+  
+  /* The Modal (background) */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.9);
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 0;
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: white;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 35px;
+    font-weight: bold;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #999;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /* Hide the slides by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev,
+  .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 16px;
+    margin-top: -50px;
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    -webkit-user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover,
+  .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* Caption text */
+  .caption-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 16px;
+    color: white;
+  }
+  
+  img.demo {
+    opacity: 0.6;
+  }
+  
+  .active,
+  .demo:hover {
+    opacity: 1;
+  }
+  
+  img.hover-shadow {
+    transition: 0.3s;
+  }
+  
+  .hover-shadow:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  }
+
+
+
+//venue styling
+
+#map {
+    height: 100%
+}
+
+//foto styling
+.level-item {
+   margin: 4em;
+}
+
+//title
+
+.title {
+    margin: 1em;
+    font-family: 'ZCOOL XiaoWei', serif;
+    text-align: center;
+}
+
+//form styling
+
+#form {
+    background-image: url("../img/form background.jpg");
+    height: 120%;
+}
+
+.asterix {
+    color: red;
+}
+
+label {
+    font-weight: bold;
+    padding-bottom: 0.5em;
+    padding-top: 1em;
+}
+
+form {
+    margin-bottom: 6em;
+}
+
+input[type=submit] {
+    background-color: $pink;
+    color: #fff;
+}
+
+input[type=submit]:hover {
+    background-color: $blue;
+    animation-name: scale;
+    animation-duration: 0.4s;
+
+    @keyframes scale {
+        20% {
+          transform: scale(1.2);
+          opacity: 0.8;
+        }
+    }
+}
+
+input[type=submit]:active {
+    background-color: $blue;
+    transform: scale(1.1);
+}
+
+
+//footer
+
+footer {
+    margin-top: 6em;
+    
+}
+
+.footer {
+    padding: 0;
+    padding-bottom: 1em !important;
+    padding-top: 1em !important;
+    width: 100vw;
+}
+
+
+
+@import url('https://fonts.googleapis.com/css?family=ZCOOL+XiaoWei|Charm');
+
+@import "../node_modules/bulma/bulma";
