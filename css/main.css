@@ -62,7 +62,7 @@ section {
   background-size: 200% 100%; }
 
 .navbar-burger {
-  padding-right: 0.5em;
+  padding-right: 1em;
   transform: scale(2); }
 
 .center {
@@ -242,8 +242,8 @@ input[type=submit]:active {
 @media screen and (max-width: 1000px) {
   #form {
     background: none;
-    margin-left: 0.5em;
-    margin-right: 0.5em; } }
+    padding-left: 0.5em;
+    padding-right: 0.5em; } }
 
 footer {
   margin-top: 6em; }
