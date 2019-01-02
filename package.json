@@ -31,6 +31,8 @@
     "start": "npm-run-all --parallel css-watch js-watch"
   },
   "dependencies": {
-    "bulma-carousel": "^3.0.0"
+    "animate.css": "^3.7.0",
+    "bulma-carousel": "^3.0.0",
+    "waypoints": "^4.0.1"
   }
 }

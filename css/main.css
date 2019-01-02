@@ -2253,7 +2253,7 @@ a.box:active {
   .input.is-inline,
   .textarea.is-inline {
     display: inline;
-    width: auto; }
+    }
 
 .input.is-rounded {
   border-radius: 290486px;
@@ -2344,7 +2344,6 @@ a.box:active {
     padding-right: calc(0.625em - 1px);
     padding-top: calc(0.375em - 1px);
     position: relative;
-    vertical-align: top;
     background-color: white;
     border-color: #dbdbdb;
     color: #363636;

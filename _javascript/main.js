@@ -33,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
 var countDownDate = new Date("Jun 22, 2019 11:00:00").getTime();
 
 // Update the count down every 1 second
-var x = setInterval(function() {
+;
 
   // Get todays date and time
   var now = new Date().getTime();
@@ -49,9 +49,9 @@ var x = setInterval(function() {
   // If the count down is finished, write some text 
   if (distance < 0) {
     clearInterval(x);
-    document.getElementById("countdown").innerHTML = "0";
+    document.getElementById("countdown").innerHTML = " ";
   }
-}, 60000);
+;
 
 //google maps
 var map;
@@ -113,7 +113,20 @@ function showSlides(n) {
   captionText.innerHTML = dots[slideIndex-1].alt;
 }
 
-    
+//animations
+
+//animate column anouk
+let waypoint = new Waypoint({
+  element: document.getElementById('story'),
+  handler: function() {
+    document.getElementById('column-anouk').classList.add('slideInLeft');
+    document.getElementById('column-seppe').classList.add('slideInRight');
+  },
+  offset: 150
+})
+
+//animate column seppe
+
 
 /* pictures*/
 /*
@@ -136,3 +149,5 @@ function carousel() {
     setTimeout(carousel, 8000); // Change image every 2 seconds
 }
 */
+
+//form handling

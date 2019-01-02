@@ -54,7 +54,10 @@ section {
 .hero {
     background-image: url("../img/cover.jpg");
     height: 100vh;
-    position: sticky;
+    background-attachment: fixed;
+    background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .is-1 {
@@ -269,8 +272,6 @@ figure > img {
     
   }
 
-
-
 //venue styling
 
 #map {
@@ -309,6 +310,13 @@ label {
 
 form {
     margin-bottom: 6em;
+}
+
+@media screen and (min-width: 1000px) {
+    form {
+        margin-left: 50%;
+        margin-right: 20%;
+    }
 }
 
 input[type=submit] {
@@ -357,6 +365,7 @@ footer {
     padding-top: 1em !important;
     width: 100vw;
 }
+
 
 
 
