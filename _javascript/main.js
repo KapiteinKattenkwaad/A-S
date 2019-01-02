@@ -151,3 +151,32 @@ function carousel() {
 */
 
 //form handling
+function sendForm() { 
+var url = 'https://docs.google.com/forms/d/e/1FAIpQLSfnpTpvUJwwWLotoodENzRYOjhow6iXnpOatUvPyYz0tTByXQ/formResponse';
+var data = {username: 'example'};
+
+fetch(url, {
+  method: 'POST', // or 'PUT'
+ 
+  body: JSON.stringify(data), // data can be `string` or {object}!
+  headers:{
+    'Content-Type': 'application/json'
+  }
+}).then(res => res.json())
+.then(response => console.log('Success:', JSON.stringify(response)))
+.catch(error => console.error('Error:', error));
+}
+
+/*
+function sendForm() {
+  var xhttp = new XMLHttpRequest();
+  xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+      document.getElementById("formulier").innerHTML =
+      this.responseText;
+    }
+  };
+  xhttp.open("GET", "https://docs.google.com/forms/d/e/1FAIpQLSfnpTpvUJwwWLotoodENzRYOjhow6iXnpOatUvPyYz0tTByXQ/formResponse", true);
+  xhttp.send("naam=entry.456305695");
+}
+*/
