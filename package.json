@@ -33,6 +33,7 @@
   "dependencies": {
     "animate.css": "^3.7.0",
     "bulma-carousel": "^3.0.0",
+    "onscroll-effect": "^1.1.2",
     "waypoints": "^4.0.1"
   }
 }

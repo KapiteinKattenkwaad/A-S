@@ -53,6 +53,21 @@ var countDownDate = new Date("Jun 22, 2019 11:00:00").getTime();
   }
 ;
 
+
+//scroll menu down
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("navbar").style.top = "0";
+  } else {
+    document.getElementById("navbar").style.top = "-3.25em";
+  }
+}
+
+
+/*
 //google maps
 var map;
       function initMap() {
@@ -63,7 +78,7 @@ var map;
           var marker = new google.maps.Marker({position: burgerij, map: map});
           
         }
-      
+   */   
   
 /* memories */
 
@@ -116,14 +131,7 @@ function showSlides(n) {
 //animations
 
 //animate column anouk
-let waypoint = new Waypoint({
-  element: document.getElementById('story'),
-  handler: function() {
-    document.getElementById('column-anouk').classList.add('slideInLeft');
-    document.getElementById('column-seppe').classList.add('slideInRight');
-  },
-  offset: 150
-})
+
 
 //animate column seppe
 
@@ -151,32 +159,16 @@ function carousel() {
 */
 
 //form handling
-function sendForm() { 
-var url = 'https://docs.google.com/forms/d/e/1FAIpQLSfnpTpvUJwwWLotoodENzRYOjhow6iXnpOatUvPyYz0tTByXQ/formResponse';
-var data = {username: 'example'};
 
-fetch(url, {
-  method: 'POST', // or 'PUT'
- 
-  body: JSON.stringify(data), // data can be `string` or {object}!
-  headers:{
-    'Content-Type': 'application/json'
-  }
-}).then(res => res.json())
-.then(response => console.log('Success:', JSON.stringify(response)))
-.catch(error => console.error('Error:', error));
-}
-
-/*
 function sendForm() {
   var xhttp = new XMLHttpRequest();
   xhttp.onreadystatechange = function() {
     if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("formulier").innerHTML =
+      document.getElementById("response").innerHTML =
       this.responseText;
     }
   };
-  xhttp.open("GET", "https://docs.google.com/forms/d/e/1FAIpQLSfnpTpvUJwwWLotoodENzRYOjhow6iXnpOatUvPyYz0tTByXQ/formResponse", true);
-  xhttp.send("naam=entry.456305695");
+  xhttp.open("POST", "https://docs.google.com/forms/d/e/1FAIpQLSfnpTpvUJwwWLotoodENzRYOjhow6iXnpOatUvPyYz0tTByXQ/formResponse", true);
+  xhttp.send("entry.456305695");
 }
-*/
+

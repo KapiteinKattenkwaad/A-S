@@ -4,11 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="shortcut icon" href="img/heart.ico" type="image/x-icon">
-    <link rel="stylesheet" href="css\animate.css\animate.min.css">
-    <script src="node_modules\waypoints\lib\noframework.waypoints.min.js"></script>
-    
+    <link rel="stylesheet" href="_sass/main.css">
+    <link rel="shortcut icon" href="img/heart.ico" type="image/x-icon"> 
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">  
+    <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet"> 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
     <title>Anouk & Seppe</title>
 </head>
@@ -18,30 +17,7 @@
 
   <!--navigation-->
 
-  <nav class="navbar is-transparent is-fixed-top">
-
-    
-      <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-          <span aria-hidden="true"></span>
-        </a>
-      
-
-    
-
-      <div id="navMenu" class="navbar-menu">
-      <div class="navbar-start">
-          
-              <a href="#home" class="navbar-item is-active">Home</a>
-              <a href="#story" class="navbar-item">The story</a>
-              <a href="#venue" class="navbar-item">Venue</a>
-              <a href="#wishlist" class="navbar-item">Wishlist</a>
-    
-            </div>
-      </div>
-      
-      </nav>
+  
 
    
 
@@ -51,22 +27,42 @@
 
             <h1 class="title is-1">Anouk & Seppe</h1>
             <h4 class="title is-4">22 juni 2019</h4>
+            <h3 class="title is-3">Nog <div id="countdown">.</div> Ben jij bij onze mooiste dag?</h3>
+
 
         </div>
 
       </div>
 
+      <nav class="navbar is-transparent is-fixed-top" id="navbar">
+
+    
+          <a role="button" class="navbar-burger" data-target="navMenu" aria-label="menu" aria-expanded="false">
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+              <span aria-hidden="true"></span>
+            </a>
+          
+    
+        
+    
+          <div id="navMenu" class="navbar-menu">
+          <div class="navbar-start">
+              
+                  <a href="#home" class="navbar-item">Home</a>
+                  <a href="#story" class="navbar-item">Uitnodiging</a>
+                  <a href="#venue" class="navbar-item">Parkeren</a>
+                  <a href="#form" class="navbar-item">RSVP</a>
+        
+                </div>
+          </div>
+          
+          </nav>
+
       
 
       <!--countdown-->
-      <section>
-
-          <h3 class="title is-3">Nog <div id="countdown"></div> tot de big day!</h3>
-
-
-      </section>
-
-      
+         
           
                
 
@@ -75,37 +71,91 @@
       <!-- story-->
       <section id="story" >
 
-        <div class="title is-2">The story</div>
+        <div class="title is-2" id="uitnodiging-title">Uitnodiging</div>
 
         <div class="columns has-text-centered">
           <div class="container">
 
               <div id="column-anouk" class="column animated ">
-                  <h3 class="title is-3" >Anouk</h3>
-                  <figure class="profile-pic center">
-                    <img src="img/anouk.jpg" alt="anouk profile pic">
-                  </figure>
+                  <h3 class="title is-3" >Burgerlijke trouw</h3>
+                  
                   <p> 
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non blanditiis neque molestias ipsa iste ut voluptatibus expedita deleniti facere, perferendis unde dicta aliquid cumque iure, cupiditate tempore fugit pariatur sit?
+                    <span> <i class="far fa-clock"></i> 11.30u </span>
                   </p>
+                    <br />
+                    <br />
+                    <br />
+                  <p>
+                    <span> <i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/tM7zNhNurm72"> Felix Pakhuis, Godefriduskaai 30, 2000 Antwerpen </a> </span>
+                  </p>
+                    <br />
+                  <figure class="profile-pic center">
+                      <img src="img/felix.jpg" alt="felix pakhuis">
+                    </figure>
                 </div>
           </div>
              <div class="container">
                 <div id="column-seppe" class="column animated ">
-                    <h3 class="title is-3" >Seppe</h3>
-                    <figure class="profile-pic center">
-                        <img src="img/seppe.jpg" alt="seppe profile pic">
-                      </figure>
+                    <h3 class="title is-3" >Ceremonie</h3>
+                    <p> 
+                        <span> <i class="far fa-clock"></i> 16.30u: Welkom </span>
+                      </p>
                       <p> 
-                          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non blanditiis neque molestias ipsa iste ut voluptatibus expedita deleniti facere, perferendis unde dicta aliquid cumque iure, cupiditate tempore fugit pariatur sit?
+                          <span> <i class="far fa-clock"></i> 16.45u: Begin ceremonie </span>
                         </p>
+                        <br />
+                      <p>
+                        <span> <i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/a1CrtbxwrZx"> Zaal XL ‘boven de burgerij’, Sint-Laureiskaai 8, 2000 Antwerpen </a>  </span>
+                      </p>
+                        <br />
+                      <figure class="profile-pic center">
+                          <img src="img/burgerij.jpg" alt="burgerij">
+                        </figure>
              </div>
 
           </div>
 
         </div>
 
+        <div id="cadeau">
+          <p>Cadeautip: <i class="far fa-envelope"></i></p>
+          <p>P.S.: Onze kat is allergisch voor bloemen.</p>
+        </div>
+
       </section>
+
+      <!--Venue-->
+
+      <section id="venue">
+
+          <div class="title is-2">Parkeren</div>
+
+          <div id="parkeer">
+
+         
+          <p>De festiviteiten spelen zich af op het Eilandje in Antwerpen. 
+            <br />
+            Hieronder kan je een overzicht van de parkeergelegenheden vinden. 
+            <br />
+            Op straat parkeren is uiteraard ook mogelijk.</p>
+
+          <ul>
+            <li>
+                <p>Parking Rijnkaai (gratis) </p>
+                <div class="iframe-parking">
+                  <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.31343650554!2d4.400079215316161!3d51.2317221386436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f65b22c79611%3A0x4d402503b24f8766!2sParking+Rijnkaai!5e0!3m2!1snl!2sbe!4v1554842499930!5m2!1snl!2sbe" width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+                
+            </li>
+            <li>
+                <p>Q-parc Godefriduskaai: Zeevaartstraat 11 (betalend) </p>
+                <div class="iframe-parking">
+                   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.530442378769!2d4.407268615316004!3d51.22772513893473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f656ccf867e5%3A0x63e608b5279b8e3b!2sQ-Park+Godefriduskaai!5e0!3m2!1snl!2sbe!4v1554842545461!5m2!1snl!2sbe" width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+                </div>
+            </li>
+          </ul>
+        </div>
+        </section>
 
         <!--memories-->
 
@@ -179,59 +229,57 @@
             </div>
           </div>
           </section>
-        
-          
-
-      <!--Venue-->
-
-      <section id="venue">
-
-          <div class="title is-2">The Venue</div>
-
-          <div id="map"></div>
-  
-        </section>
-
-      <!-- wishlist-->
-      <section id="wishlist">
-
-        <div class="title is-2">
-          Wishlist
-        </div>
-
-      </section>
 
 
       <!-- formulier -->
       <section id="form">
 
-      <div class="title is-2">RSVP</div>
-      <form class="container animated slideInUp" id="formulier">
+      <div id="form-wrap">
+
+      <div class="title is-2" id="rsvp-title">RSVP</div>
+      <p id="laat-weten"> Laat voor 22 mei weten of je komt via dit formulier.</p>
+      <form class="container animated slideInUp" id="formulier" >
      
           
         <div class="field">
-            <label for="naam">Jouw naam: <span class="asterix">*</span></label>
-            <input class="input is-large" name="entry.456305695" type="text" required>
+            <label for="voornaam">Jouw voornaam: <span class="asterix">*</span></label>
+            <input class="input is-large" id="naam" name="voornaam" type="text" required>
         </div>
 
         <div class="field">
-            <label for="naam partner">Naam partner:</label>
-            <input class="input is-large" name="entry.1010976622" type="text" >
+            <label for="achternaam">Jouw achternaam:</label>
+            <input class="input is-large" name="achternaam" type="text" >
         </div>
 
         <div class="field">
-            <label for="email">Jouw emailadres: <span class="asterix">*</span></label>
-            <input class="input is-large" name="entry.46474950" type="email" required>
+            <div class="control" required>
+                <label class="radio">
+                  <input type="radio" name="plus1" value="met">
+                  Ik kom met een plus one.
+                </label>
+                <br />
+                <label class="radio">
+                  <input type="radio" name="plus1" value="zonder">
+                  Ik kom zonder een plus one.
+                </label>
+              </div>
+            
         </div>
 
         <div class="field">
-            <label for="schijfkes">Deze schijfkes wil ik geire horen (3):</label>
-            <textarea class="textarea" name="entry.1045535023" type="textarea"></textarea>
+            <label for="schijfkes">Nog vragen? </label>
+            <textarea class="textarea" id="schijfkes" name="vragen" type="textarea"></textarea>
         </div>
 
-        <input class="button is-large submit" type="submit" value="Ik kom!" onclick="sendForm()">
+        <input class="button is-large submit" type="submit" id="submitButton" value="Ik kom!" onClick="sendForm()" >
+
+        <input type="hidden" name="_next" value="bedankt.html" />
+
+        <div id="response"></div>
         
       </form>
+
+    </div>
 
     </section>
 
@@ -246,7 +294,6 @@
         </footer>
 
     <script type="text/javascript" src="_javascript/main.js"></script>
-    
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmirX6Ssn27SjjaS5fjDxtj9GVNERSZic&callback=initMap"
     async defer></script>
 </body>
