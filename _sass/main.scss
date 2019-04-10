@@ -189,6 +189,16 @@ h1.title.is-1 {
   }
 }
 
+#column-anouk:hover #felix {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
+#column-seppe:hover #burgerij {
+  transition: 0.3s;
+  transform: scale(1.1);
+}
+
 h3.title.is-3 {
   font-family: 'ZCOOL XiaoWei', serif;
 }
