@@ -53,6 +53,11 @@ h3.title.is-3 {
   font-family: "Allura", cursive;
 }
 
+h4.title.is-4 {
+  font-size: 2rem;
+  color: #06bcef !important;
+}
+
 h1.title.is-1 {
   font-size: 6em;
 }
@@ -83,8 +88,15 @@ h1.title.is-1 {
 }
 
 @media screen and (max-width: 1000px) {
+  body {
+    overflow: hidden;
+  }
+
   #navbar {
     top: 0em;
+    padding-top: 15px;
+    margin-right: 15px;
+    background: transparent;
   }
 }
 .navbar {
@@ -243,8 +255,8 @@ li > p {
     margin-left: 0px;
   }
 }
-#laat-weten {
-  margin-left: 40px;
+#rsvp-title {
+  margin-left: 0;
 }
 
 form#formulier {
@@ -286,6 +298,7 @@ form {
 
 input#submitButton {
   margin-top: 50px;
+  margin-bottom: 50px;
 }
 
 @media screen and (min-width: 1000px) {
@@ -323,6 +336,68 @@ input[type=submit]:active {
   #form {
     padding-left: 0.5em;
     padding-right: 0.5em;
+  }
+}
+#memories {
+  margin-top: 0;
+}
+
+@keyframes slidy {
+  0% {
+    left: 0%;
+  }
+  20% {
+    left: 0%;
+  }
+  25% {
+    left: -100%;
+  }
+  45% {
+    left: -100%;
+  }
+  50% {
+    left: -200%;
+  }
+  70% {
+    left: -200%;
+  }
+  75% {
+    left: -300%;
+  }
+  95% {
+    left: -300%;
+  }
+  100% {
+    left: -400%;
+  }
+}
+body {
+  margin: 0;
+}
+
+div#slider {
+  overflow: hidden;
+}
+
+div#slider figure img {
+  width: 20%;
+  float: left;
+  border-radius: 15px;
+}
+
+div#slider figure {
+  position: relative;
+  width: 500%;
+  margin: 0;
+  left: 0;
+  text-align: left;
+  font-size: 0;
+  animation: 25s slidy infinite;
+}
+
+@media screen and (min-width: 800px) {
+  #slider {
+    margin: auto 300px;
   }
 }
 footer {

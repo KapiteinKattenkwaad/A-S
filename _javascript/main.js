@@ -32,8 +32,6 @@ document.addEventListener('DOMContentLoaded', () => {
 // Set the date we're counting down to
 var countDownDate = new Date("Jun 22, 2019 11:00:00").getTime();
 
-// Update the count down every 1 second
-;
 
   // Get todays date and time
   var now = new Date().getTime();
@@ -66,19 +64,46 @@ function scrollFunction() {
   }
 }
 
+//iframes
+
+function createIframe(){
+  var i = document.createElement("iframe");
+ 
+  i.src = "https://maps.google.com/maps?width=100%&height=500&hl=nl&q=Parking%20Rijnkaai%2C%20Rijnkaai%2C%20Antwerpen+(Parking%20Rijkaai)&ie=UTF8&t=&z=16&iwloc=B&output=embed";
+  i.scrolling = "auto";
+  i.frameborder = "0";
+  i.width = "500px";
+  i.height = "350px";
+  document.getElementById("iframe-rijnkaai").appendChild(i);
+};
 
 
-//form handling
 
-function sendForm() {
-  var xhttp = new XMLHttpRequest();
-  xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
-      document.getElementById("response").innerHTML =
-      this.responseText;
-    }
-  };
-  xhttp.open("POST", "https://docs.google.com/forms/d/e/1FAIpQLSfnpTpvUJwwWLotoodENzRYOjhow6iXnpOatUvPyYz0tTByXQ/formResponse", true);
-  xhttp.send("entry.456305695");
-}
+function createIframe2(){
+  var j = document.createElement("iframe");
+  j.src = "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.530442378769!2d4.407268615316004!3d51.22772513893473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f656ccf867e5%3A0x63e608b5279b8e3b!2sQ-Park+Godefriduskaai!5e0!3m2!1snl!2sbe!4v1554842545461!5m2!1snl!2sbe";
+  j.scrolling = "auto";
+  j.frameborder = "0";
+  j.width = "500px";
+  j.height = "350px";
+  document.getElementById("iframe-q-park").appendChild(j);
+};
+
+
+// Check for browser support of event handling capability
+if (window.addEventListener)
+window.addEventListener("load", createIframe, false);
+else if (window.attachEvent)
+window.attachEvent("onload", createIframe);
+else window.onload = createIframe;
+
+if (window.addEventListener)
+window.addEventListener("load", createIframe2, false);
+else if (window.attachEvent)
+window.attachEvent("onload", createIframe2);
+else window.onload = createIframe2;
+
+
+
+
 

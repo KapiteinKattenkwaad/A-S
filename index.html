@@ -10,8 +10,7 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
     integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
   <link href="https://fonts.googleapis.com/css?family=Allura" rel="stylesheet">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css"
-    integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+ 
   <title>Anouk & Seppe</title>
 </head>
 
@@ -90,7 +89,7 @@
           <br />
           <br />
           <p>
-            <span> <i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/tM7zNhNurm72"> Felix Pakhuis,
+            <span> <i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/tM7zNhNurm72" target="_blank"> Felix Pakhuis,
                 Godefriduskaai 30, 2000 Antwerpen </a> </span>
           </p>
           <br />
@@ -101,7 +100,7 @@
       </div>
       <div class="container">
         <div id="column-seppe" class="column animated ">
-          <h3 class="title is-3">Ceremonie</h3>
+          <h3 class="title is-3">Ceremonie & feest</h3>
           <p>
             <span> <i class="far fa-clock"></i> 16.30u: Welkom </span>
           </p>
@@ -110,7 +109,7 @@
           </p>
           <br />
           <p>
-            <span> <i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/a1CrtbxwrZx"> Zaal XL ‘boven de
+            <span> <i class="fas fa-map-marker-alt"></i> <a href="https://goo.gl/maps/a1CrtbxwrZx" target="_blank"> Zaal XL ‘boven de
                 burgerij’, Sint-Laureiskaai 8, 2000 Antwerpen </a> </span>
           </p>
           <br />
@@ -124,8 +123,8 @@
     </div>
 
     <div id="cadeau">
-      <p>Cadeautip: <i class="far fa-envelope"></i></p>
-      <p>P.S.: Onze kat is allergisch voor bloemen.</p>
+      <p>Cadeautip: <i class="far fa-envelope"></i> of BE76 7310 3430 1595</p>
+      <p>Geen bloemen wegens huwelijksreis maandagochtend</p>
     </div>
 
   </section>
@@ -149,17 +148,13 @@
         <div class="column">
           <p>Parking Rijnkaai (gratis) </p>
           <div class="iframe-parking">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.31343650554!2d4.400079215316161!3d51.2317221386436!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f65b22c79611%3A0x4d402503b24f8766!2sParking+Rijnkaai!5e0!3m2!1snl!2sbe!4v1554842499930!5m2!1snl!2sbe"
-              width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div id="iframe-rijnkaai"> </div>
           </div>
         </div>
         <div class="column">
           <p>Q-parc Godefriduskaai: Zeevaartstraat 11 (betalend) </p>
           <div class="iframe-parking">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2498.530442378769!2d4.407268615316004!3d51.22772513893473!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3f656ccf867e5%3A0x63e608b5279b8e3b!2sQ-Park+Godefriduskaai!5e0!3m2!1snl!2sbe!4v1554842545461!5m2!1snl!2sbe"
-              width="500" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <div id="iframe-q-park"></div> 
           </div>
         </div>
       </div>
@@ -180,7 +175,9 @@
 
       <div class="title is-2" id="rsvp-title">RSVP</div>
       <p id="laat-weten"> Laat voor 22 mei weten of je komt via dit formulier.</p>
-      <form class="container animated slideInUp" id="formulier">
+      <br />
+      <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+      <form accept-charset="UTF-8" action="https://usebasin.com/f/ef703cad6a08" method="POST">
 
 
         <div class="field">
@@ -189,37 +186,60 @@
         </div>
 
         <div class="field">
-          <label for="achternaam">Jouw achternaam:</label>
-          <input class="input is-large" name="achternaam" type="text">
+          <label for="achternaam">Jouw achternaam: <span class="asterix">*</span></label>
+          <input class="input is-large" name="achternaam" type="text" required>
         </div>
 
         <div class="field">
-          <div class="control" required>
+          <div class="control">
             <label class="radio">
-              <input type="radio" name="plus1" value="met">
+              <input type="radio" name="plus1" value="met+1" required>
               Ik kom met een plus one.
             </label>
             <br />
             <label class="radio">
-              <input type="radio" name="plus1" value="zonder">
+              <input type="radio" name="plus1" value="zonder+1">
               Ik kom zonder een plus one.
             </label>
           </div>
 
         </div>
 
+        <br />
+        <div class="field">
+          <label class="checkbox">
+            <input type="checkbox" name="veggie">
+            Ik ben veggie
+          </label>
+      </div>
+
         <div class="field">
           <label for="schijfkes">Nog vragen? </label>
           <textarea class="textarea" id="schijfkes" name="vragen" type="textarea"></textarea>
         </div>
 
-        <input class="button is-large submit" type="submit" id="submitButton" value="Ik kom!" onClick="sendForm()">
+        <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy"></div>
+        <input class="button is-large submit" type="submit" id="submitButton" value="Ik kom!">
 
-        <input type="hidden" name="_next" value="bedankt.html" />
 
         <div id="response"></div>
 
       </form>
+
+    </div>
+
+  </section>
+
+  <section id="memories">
+
+    <div id="slider">
+      <figure>
+        <img src="../img/1.jpg" alt="">
+        <img src="../img/2.jpg" alt="">
+        <img src="../img/3.jpg" alt="">
+        <img src="../img/4.jpg" alt="">
+        <img src="../img/5.jpg" alt="">
+      </figure>
 
     </div>
 
@@ -230,14 +250,13 @@
   <footer class="footer">
     <div class="content has-text-centered">
       <p>
-        Made by <a href="https://maxstouten.netlify.com">M</a> with 💓
+        Made by <a href="https://maxstouten.com" target="_blank">M</a> with 💓
       </p>
     </div>
   </footer>
 
   <script type="text/javascript" src="_javascript/main.js"></script>
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDmirX6Ssn27SjjaS5fjDxtj9GVNERSZic&callback=initMap"
-    async defer></script>
+ 
 </body>
 
 </html>
